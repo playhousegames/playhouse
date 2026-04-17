@@ -1,33 +1,49 @@
+'use client';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
-      <nav style={{
-        background: '#d4001a',
-        padding: '0 32px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        borderBottom: '6px solid #ffd700',
-      }}>
-        <Link href="/" style={{
-          fontFamily: "'Press Start 2P', monospace",
-          fontSize: '14px',
-          color: '#ffd700',
-          textDecoration: 'none',
-          padding: '14px 0',
-          letterSpacing: '2px',
-        }}>
+      <style>{`
+        .nav-links-desktop { display: flex; gap: 28px; font-family: 'VT323', monospace; font-size: 20px; }
+        .nav-hamburger { display: none; }
+        .nav-mobile-menu { display: none; }
+        @media (max-width: 768px) {
+          .nav-links-desktop { display: none; }
+          .nav-hamburger { display: block; }
+          .nav-mobile-menu { display: flex; flex-direction: column; background: #a3000f; border-top: 3px solid #ffd700; padding: 0; }
+          .nav-mobile-menu a { padding: 16px 24px; border-bottom: 1px solid rgba(255,215,0,0.2); font-family: 'VT323', monospace; font-size: 22px; color: #fff; text-decoration: none; display: block; }
+          .nav-mobile-menu a:hover { background: rgba(255,215,0,0.1); color: #ffd700; }
+          .nav-logo { font-size: 11px !important; }
+        }
+      `}</style>
+
+      <nav style={{ background: '#d4001a', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '6px solid #ffd700' }}>
+        <Link href="/" className="nav-logo" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '14px', color: '#ffd700', textDecoration: 'none', padding: '14px 0', letterSpacing: '2px' }}>
           PLAY<span style={{ color: '#fff' }}>HOUSE</span>.IO
         </Link>
-        <div style={{ display: 'flex', gap: '28px', fontFamily: "'VT323', monospace", fontSize: '20px', color: '#fff' }}>
-          <Link href="/handhelds" style={{ color: '#fff' }}>Handhelds</Link>
-          <Link href="/arcade" style={{ color: '#fff' }}>Arcade</Link>
-          <Link href="/controllers" style={{ color: '#fff' }}>Controllers</Link>
-          <Link href="/guides" style={{ color: '#fff' }}>Guides</Link>
+        <div className="nav-links-desktop">
+          {['Handhelds', 'Arcade', 'Controllers', 'Guides'].map((item) => (
+            <Link key={item} href={`/${item.toLowerCase()}`} style={{ color: '#fff', textDecoration: 'none' }}>{item}</Link>
+          ))}
         </div>
+        <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '10px', color: '#ffd700', background: 'none', border: '2px solid #ffd700', padding: '8px 12px', cursor: 'pointer' }}>
+          {menuOpen ? '✕ CLOSE' : '☰ MENU'}
+        </button>
       </nav>
+
+      {menuOpen && (
+        <div className="nav-mobile-menu">
+          {['Handhelds', 'Arcade', 'Controllers', 'Guides'].map((item) => (
+            <Link key={item} href={`/${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>
+              ▶ {item}
+            </Link>
+          ))}
+        </div>
+      )}
     </>
   );
 }
