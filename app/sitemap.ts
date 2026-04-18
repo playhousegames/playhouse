@@ -1,17 +1,27 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    { url: 'https://playhouse.io', lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
-    { url: 'https://playhouse.io/handhelds', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: 'https://playhouse.io/arcade', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: 'https://playhouse.io/controllers', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: 'https://playhouse.io/guides', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: 'https://playhouse.io/guides/best-retro-handheld', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://playhouse.io/guides/miyoo-mini-plus-review', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://playhouse.io/guides/best-retro-handheld-under-50', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://playhouse.io/guides/best-retro-controllers', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://playhouse.io/guides/best-mini-arcade-machines', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://playhouse.io/guides/best-retro-handheld-for-kids', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-  ];
+  const base = 'https://playhouse.io';
+  const now = new Date();
+
+  const routes = [
+    { url: '/', priority: 1.0, freq: 'weekly' },
+    { url: '/guides', priority: 0.9, freq: 'weekly' },
+    { url: '/guides/best-retro-handheld', priority: 0.9, freq: 'monthly' },
+    { url: '/guides/miyoo-mini-plus-review', priority: 0.9, freq: 'monthly' },
+    { url: '/guides/best-retro-handheld-under-50', priority: 0.9, freq: 'monthly' },
+    { url: '/guides/best-retro-controllers', priority: 0.9, freq: 'monthly' },
+    { url: '/guides/best-mini-arcade-machines', priority: 0.9, freq: 'monthly' },
+    { url: '/guides/best-retro-handheld-for-kids', priority: 0.9, freq: 'monthly' },
+    { url: '/handhelds', priority: 0.8, freq: 'weekly' },
+    { url: '/arcade', priority: 0.8, freq: 'weekly' },
+    { url: '/controllers', priority: 0.8, freq: 'weekly' },
+  ] as const;
+
+  return routes.map(({ url, priority, freq }) => ({
+    url: `${base}${url}`,
+    lastModified: now,
+    changeFrequency: freq,
+    priority,
+  }));
 }

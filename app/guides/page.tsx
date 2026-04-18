@@ -7,42 +7,12 @@ export const metadata: Metadata = {
 };
 
 const guides = [
-  {
-    href: '/guides/best-retro-handheld',
-    badge: 'BUYING GUIDE',
-    title: 'Best Retro Handheld 2026: Miyoo Mini Plus vs R36S vs RG35XX',
-    desc: 'Full side-by-side comparison with specs, pros, cons and a clear verdict.',
-  },
-  {
-    href: '/guides/miyoo-mini-plus-review',
-    badge: 'FULL REVIEW',
-    title: 'Miyoo Mini Plus Review 2026: Is It Still the Best?',
-    desc: 'Screen quality, build, battery life, Onion OS and honest verdict after extensive testing.',
-  },
-  {
-    href: '/guides/best-retro-handheld-under-50',
-    badge: 'BUYING GUIDE',
-    title: 'Best Retro Handheld Under £50 in 2026',
-    desc: 'R36S, RG35XX, PowKiddy RGB30 and more — the best budget handhelds reviewed and ranked.',
-  },
-  {
-    href: '/guides/best-retro-controllers',
-    badge: 'BUYING GUIDE',
-    title: 'Best Retro Controllers 2026: 8BitDo and Beyond',
-    desc: 'The best retro-style controllers for PC, Switch, Android and Raspberry Pi.',
-  },
-  {
-    href: '/guides/best-mini-arcade-machines',
-    badge: 'BUYING GUIDE',
-    title: 'Best Mini Arcade Machines 2026',
-    desc: 'Desktop cabinets from budget plug-and-play to Raspberry Pi — find the right one.',
-  },
-  {
-    href: '/guides/best-retro-handheld-for-kids',
-    badge: 'GIFT GUIDE',
-    title: 'Best Retro Handheld for Kids 2026',
-    desc: 'Age-by-age gift guide for parents — safe, fun and affordable retro gaming for children.',
-  },
+  { href: '/guides/best-retro-handheld', badge: 'BUYING GUIDE', title: 'Best Retro Handheld 2026: Miyoo Mini Plus vs R36S vs RG35XX', desc: 'Full side-by-side comparison with specs, pros, cons and a clear verdict.' },
+  { href: '/guides/miyoo-mini-plus-review', badge: 'FULL REVIEW', title: 'Miyoo Mini Plus Review 2026: Is It Still the Best?', desc: 'Screen quality, build, battery life, Onion OS and honest verdict after extensive testing.' },
+  { href: '/guides/best-retro-handheld-under-50', badge: 'BUYING GUIDE', title: 'Best Retro Handheld Under £50 in 2026', desc: 'R36S and RG35XX reviewed and ranked with real Amazon UK ratings.' },
+  { href: '/guides/best-retro-controllers', badge: 'BUYING GUIDE', title: 'Best Retro Controllers 2026: 8BitDo and Beyond', desc: 'The best retro-style controllers for PC, Switch, Android and Raspberry Pi.' },
+  { href: '/guides/best-mini-arcade-machines', badge: 'BUYING GUIDE', title: 'Best Mini Arcade Machines 2026', desc: 'Desktop cabinets from budget plug-and-play to licensed machines — reviewed with Amazon UK ratings.' },
+  { href: '/guides/best-retro-handheld-for-kids', badge: 'GIFT GUIDE', title: 'Best Retro Handheld for Kids 2026', desc: 'Age-by-age gift guide for parents — safe, fun and affordable retro gaming for children.' },
 ];
 
 export default function GuidesIndex() {
