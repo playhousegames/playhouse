@@ -1,8 +1,3 @@
-// app/page.tsx
-// STOPGAP VERSION — uses Amazon-hosted images until you've generated
-// your own with Gemini and dropped them into /public/products/.
-// Requires next.config.ts to whitelist m.media-amazon.com (see notes).
-
 import Link from 'next/link';
 import Image from 'next/image';
 import ArkGame from './components/ArkGame';
@@ -16,6 +11,7 @@ export default function Home() {
       href: 'https://amzn.to/4mE11wG',
       img: 'https://m.media-amazon.com/images/I/61X4gyiZDEL._AC_SL1500_.jpg',
       alt: 'Miyoo Mini Plus retro handheld console',
+      badge: 'TOP PICK',
     },
     {
       title: '8BITDO SN30 PRO',
@@ -23,6 +19,7 @@ export default function Home() {
       href: 'https://amzn.to/4cBExaZ',
       img: 'https://m.media-amazon.com/images/I/61gkbOGeFdL._AC_SL1500_.jpg',
       alt: '8BitDo SN30 Pro wireless controller',
+      badge: null,
     },
     {
       title: 'R36S HANDHELD',
@@ -30,6 +27,7 @@ export default function Home() {
       href: 'https://amzn.to/4tBuZEp',
       img: 'https://m.media-amazon.com/images/I/71mSHuXCU9L._AC_SL1500_.jpg',
       alt: 'R36S budget retro handheld console',
+      badge: 'BUDGET',
     },
     {
       title: 'MINI ARCADE MACHINE',
@@ -37,6 +35,7 @@ export default function Home() {
       href: 'https://amzn.to/4sZwjQl',
       img: 'https://m.media-amazon.com/images/I/71hsBC7O1kL._AC_SL1500_.jpg',
       alt: 'Desktop mini arcade machine',
+      badge: null,
     },
   ];
 
@@ -60,26 +59,42 @@ export default function Home() {
         }
       `}</style>
 
-      <ArkGame />
-
-      <div style={{ background: '#0d0620', padding: '20px 24px', borderBottom: '3px solid #333060', textAlign: 'center' }}>
-        <h1 style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '11px', color: '#fff', margin: '0 0 8px', textShadow: '2px 2px 0 #d4001a', lineHeight: 1.8 }}>
+      {/* HERO STRIP — moved above the game so H1 and value prop hit first */}
+      <div style={{ background: '#0d0620', padding: '40px 24px 32px', borderBottom: '3px solid #333060', textAlign: 'center' }}>
+        <h1 style={{
+          fontFamily: "'Press Start 2P', monospace",
+          fontSize: '14px',
+          color: '#fff',
+          margin: '0 0 16px',
+          textShadow: '3px 3px 0 #d4001a',
+          lineHeight: 1.8,
+        }}>
           YOUR GUIDE TO RETRO GAMING GEAR
         </h1>
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', margin: 0 }}>
-          Honest reviews and buying guides for retro handhelds, arcade machines and controllers. No hype, just signal.
+        <p style={{ fontFamily: "'VT323', monospace", fontSize: '20px', color: '#aaa8d0', margin: '0 auto', maxWidth: '640px', lineHeight: 1.5 }}>
+          Honest reviews and buying guides for retro handhelds, arcade machines and controllers.
+          Written by someone who was there the first time around.
         </p>
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '15px', color: '#ffd700', margin: '10px 0 0' }}>
-          #ad — This site contains affiliate links. We may earn a commission on qualifying purchases.
+        <p style={{ fontFamily: "'VT323', monospace", fontSize: '15px', color: '#ffd700', margin: '14px 0 0' }}>
+          #ad — Contains affiliate links. We may earn a commission on qualifying purchases.
         </p>
-        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '16px', flexWrap: 'wrap' }}>
-          <Link href="/handhelds" className="btn btn-yellow">▶ START HERE</Link>
-          <Link href="/guides/best-retro-handheld" className="btn">TOP PICKS 2026</Link>
+        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '20px', flexWrap: 'wrap' }}>
+          <Link href="/guides/best-retro-handheld" className="btn btn-yellow">▶ TOP PICKS 2026</Link>
+          <Link href="/about" className="btn">WHO&apos;S WRITING THIS?</Link>
         </div>
       </div>
 
       <div className="girder" />
 
+      {/* GAME — now below the hero, framed as a playful greeting */}
+      <div style={{ background: '#0d0620', padding: '24px 16px 8px', textAlign: 'center' }}>
+        <p style={{ fontFamily: "'VT323', monospace", fontSize: '17px', color: '#aaa8d0', margin: '0 0 16px' }}>
+          A little hello from Playhouse — clear the bricks, then scroll for the good stuff.
+        </p>
+      </div>
+      <ArkGame />
+
+      {/* Categories */}
       <div className="section">
         <div className="section-header">
           <span className="section-title">SELECT CATEGORY</span>
@@ -105,6 +120,7 @@ export default function Home() {
 
       <div className="girder-alt" />
 
+      {/* Featured guide */}
       <div className="section" style={{ background: '#0d0620' }}>
         <div className="section-header">
           <span className="section-title">FEATURED GUIDE</span>
@@ -113,11 +129,12 @@ export default function Home() {
         <div className="guide-grid">
           <div>
             <span className="badge">BUYING GUIDE 2026</span>
-            <h2 style={{ fontSize: '11px', color: '#fff', marginBottom: '16px', marginTop: '8px', lineHeight: 1.8 }}>
+            <h2 style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '11px', color: '#fff', marginBottom: '16px', marginTop: '8px', lineHeight: 1.8 }}>
               BEST RETRO HANDHELDS: MIYOO MINI PLUS vs R36S vs RG35XX
             </h2>
             <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.6', marginBottom: '20px' }}>
-              We tested the three most popular budget retro handhelds side by side. Here&apos;s what actually matters.
+              We put the three most popular budget retro handhelds side by side.
+              Here&apos;s what actually matters when you&apos;re choosing between them.
             </p>
             <Link href="/guides/best-retro-handheld" className="btn btn-yellow">READ THE GUIDE</Link>
           </div>
@@ -138,6 +155,7 @@ export default function Home() {
 
       <div className="girder" />
 
+      {/* Featured picks */}
       <div className="section">
         <div className="section-header">
           <span className="section-title">FEATURED PICKS</span>
@@ -145,7 +163,22 @@ export default function Home() {
         </div>
         <div className="picks-grid">
           {products.map((p) => (
-            <div key={p.title} className="pick-card" style={{ background: '#0d0620', border: '3px solid #333060', padding: '16px', display: 'flex', gap: '16px', alignItems: 'center' }}>
+            <div key={p.title} className="pick-card" style={{ background: '#0d0620', border: '3px solid #333060', padding: '16px', display: 'flex', gap: '16px', alignItems: 'center', position: 'relative' }}>
+              {p.badge && (
+                <span style={{
+                  position: 'absolute',
+                  top: '-10px',
+                  left: '16px',
+                  background: p.badge === 'TOP PICK' ? '#ffd700' : '#d4001a',
+                  color: p.badge === 'TOP PICK' ? '#0d0620' : '#ffd700',
+                  fontFamily: "'Press Start 2P', monospace",
+                  fontSize: '8px',
+                  padding: '4px 8px',
+                  letterSpacing: '1px',
+                }}>
+                  {p.badge}
+                </span>
+              )}
               <div className="pick-img-wrap">
                 <Image
                   src={p.img}
@@ -163,9 +196,6 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '14px', color: '#aaa8d0', marginTop: '16px' }}>
-          * This page contains affiliate links. Playhouse.io may earn a small commission at no extra cost to you.
-        </p>
       </div>
     </>
   );

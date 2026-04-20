@@ -14,10 +14,11 @@ export default function ArkGame() {
   const audioCtxRef = useRef<AudioContext|null>(null);
 
   const PIXEL_FONT = "'Press Start 2P', monospace";
-  const W = 480, H = 320;
-  const ROWS = 5, COLS = 10;
+  // Reduced from 480x320 to 480x260 for a more compact hero
+  const W = 480, H = 260;
+  const ROWS = 4, COLS = 10; // dropped from 5 rows to 4 to fit smaller canvas
   const BW = 42, BH = 14, BPAD = 3;
-  const BOFF_X = 9, BOFF_Y = 40;
+  const BOFF_X = 9, BOFF_Y = 30;
   const COLORS = ['#d4001a','#ff6b00','#ffd700','#39ff14','#00cfff'];
 
   function getAudio() {

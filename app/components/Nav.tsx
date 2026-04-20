@@ -5,6 +5,14 @@ import { useState } from 'react';
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const links = [
+    { label: 'Handhelds', href: '/handhelds' },
+    { label: 'Arcade', href: '/arcade' },
+    { label: 'Controllers', href: '/controllers' },
+    { label: 'Guides', href: '/guides' },
+    { label: 'About', href: '/about' },
+  ];
+
   return (
     <>
       <style>{`
@@ -26,8 +34,8 @@ export default function Nav() {
           PLAY<span style={{ color: '#fff' }}>HOUSE</span>.IO
         </Link>
         <div className="nav-links-desktop">
-          {['Handhelds', 'Arcade', 'Controllers', 'Guides'].map((item) => (
-            <Link key={item} href={`/${item.toLowerCase()}`} style={{ color: '#fff', textDecoration: 'none' }}>{item}</Link>
+          {links.map((l) => (
+            <Link key={l.label} href={l.href} style={{ color: '#fff', textDecoration: 'none' }}>{l.label}</Link>
           ))}
         </div>
         <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '10px', color: '#ffd700', background: 'none', border: '2px solid #ffd700', padding: '8px 12px', cursor: 'pointer' }}>
@@ -37,9 +45,9 @@ export default function Nav() {
 
       {menuOpen && (
         <div className="nav-mobile-menu">
-          {['Handhelds', 'Arcade', 'Controllers', 'Guides'].map((item) => (
-            <Link key={item} href={`/${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>
-              ▶ {item}
+          {links.map((l) => (
+            <Link key={l.label} href={l.href} onClick={() => setMenuOpen(false)}>
+              ▶ {l.label}
             </Link>
           ))}
         </div>
