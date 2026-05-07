@@ -14,6 +14,7 @@ const guides = [
   { href: '/guides/best-mini-arcade-machines', badge: 'BUYING GUIDE', title: 'Best Mini Arcade Machines 2026', desc: 'Desktop cabinets from budget plug-and-play to licensed machines — reviewed with Amazon UK ratings.' },
   { href: '/guides/best-retro-handheld-for-kids', badge: 'GIFT GUIDE', title: 'Best Retro Handheld for Kids 2026', desc: 'Age-by-age gift guide for parents — safe, fun and affordable retro gaming for children.' },
   { href: '/guides/nintendo-switch-vs-miyoo-mini-plus', badge: 'COMPARISON', title: 'Nintendo Switch vs Miyoo Mini Plus (2026)', desc: 'Which is actually worth buying for retro gaming? Honest side-by-side with a clear verdict.' },
+  { href: '/guides/miyoo-mini-plus-emulation-guide', badge: 'EMULATION GUIDE', title: 'What Can the Miyoo Mini Plus Run? Full Emulation Guide', desc: 'Performance tiers for every console — PS1, N64, GBA, Dreamcast, PSP — with honest results and best settings.' },
 ];
 
 export default function GuidesIndex() {

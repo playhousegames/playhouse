@@ -197,8 +197,18 @@ export default function MiyooMiniPlusReview() {
           </div>
         ))}
 
+        {/* Internal link to emulation guide */}
+        <div style={{ marginTop: '32px', padding: '20px', background: '#0d0620', border: '3px solid #333060' }}>
+          <p style={{ fontFamily: "'VT323', monospace", fontSize: '17px', color: '#aaa8d0', marginBottom: '12px' }}>
+            Want to know exactly what it runs?
+          </p>
+          <Link href="/guides/miyoo-mini-plus-emulation-guide" className="btn">
+            ▶ SEE THE FULL EMULATION GUIDE
+          </Link>
+        </div>
+
         {/* Final CTA */}
-        <div style={{ marginTop: '40px', padding: '24px', background: '#0d0620', border: '3px solid #ffd700', textAlign: 'center' }}>
+        <div style={{ marginTop: '24px', padding: '24px', background: '#0d0620', border: '3px solid #ffd700', textAlign: 'center' }}>
           <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#fff', marginBottom: '16px' }}>
             Ready to pick one up?
           </p>
