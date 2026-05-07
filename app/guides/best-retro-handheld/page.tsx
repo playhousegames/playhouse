@@ -16,22 +16,27 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://playhouse.io/guides/best-retro-handheld' },
 };
 
-const items: ListItem[] = [
+type GuideItem = ListItem & { amazonUrl: string };
+
+const items: GuideItem[] = [
   {
     position: 1,
     name: 'Miyoo Mini Plus',
     url: 'https://playhouse.io/guides/miyoo-mini-plus-review',
     image: 'https://playhouse.io/products/miyoo-mini-plus.jpg',
+    amazonUrl: 'https://amzn.to/4mE11wG',
   },
   {
     position: 2,
     name: 'Anbernic RG35XX',
     url: 'https://playhouse.io/guides/best-retro-handheld-under-50',
+    amazonUrl: 'https://amzn.to/41L7NXQ',
   },
   {
     position: 3,
     name: 'R36S',
     url: 'https://playhouse.io/guides/best-retro-handheld-under-50',
+    amazonUrl: 'https://amzn.to/4tBuZEp',
   },
 ];
 
@@ -109,9 +114,14 @@ export default function BestRetroHandheldGuide() {
             <p className="body-copy" style={{ marginBottom: '12px' }}>
               [Short verdict paragraph for each pick — 2-3 sentences explaining why it earned this position.]
             </p>
-            <Link href={item.url.replace('https://playhouse.io', '')} className="btn btn-yellow">
-              READ FULL REVIEW
-            </Link>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <a href={item.amazonUrl} className="btn btn-yellow" target="_blank" rel="noopener noreferrer sponsored">
+                CHECK PRICE ON AMAZON
+              </a>
+              <Link href={item.url.replace('https://playhouse.io', '')} className="btn">
+                READ FULL REVIEW
+              </Link>
+            </div>
           </div>
         ))}
 
