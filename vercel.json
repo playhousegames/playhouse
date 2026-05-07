@@ -1,9 +1,9 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.playhouse.io" }],
-      "destination": "https://playhouse.io/:path*",
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www\\.playhouse\\.io" }],
+      "destination": "https://playhouse.io/$1",
       "permanent": true
     }
   ]
