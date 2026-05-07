@@ -10,7 +10,7 @@ export default function BestUnder50() {
   return (
     <>
       <style>{`
-        .guide-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+        .guide-wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
         .pc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .product-hero { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 24px; }
         .product-img { width: 140px; height: 140px; object-fit: contain; background: #1a0a2e; flex-shrink: 0; padding: 8px; border: 2px solid #333060; }
@@ -102,7 +102,7 @@ export default function BestUnder50() {
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Amazon UK: <span style={{ color: '#ffd700' }}>4.1★</span></div>
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Price: <span style={{ color: '#ffd700' }}>~£35</span></div>
               </div>
-              <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.6' }}>
+              <p className="body-copy">
                 At around £35 the R36S is the cheapest serious retro handheld on the market. The 1GB RAM is the standout spec — it handles N64 and PS1 emulation better than most devices twice the price. Add a 3500mAh battery and analogue sticks and it&apos;s a package that&apos;s hard to beat at this price.
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function BestUnder50() {
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Amazon UK: <span style={{ color: '#ffd700' }}>3.7★</span></div>
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Price: <span style={{ color: '#ffd700' }}>~£45</span></div>
               </div>
-              <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.6' }}>
+              <p className="body-copy">
                 Anbernic is the most established brand in retro handhelds. The RG35XX has a loyal community following and GarlicOS custom firmware is excellent. However the 3.7 Amazon UK rating is worth noting — some buyers report build consistency issues with this model specifically. Worth researching the H+ variant which addresses some of the original&apos;s shortcomings.
               </p>
             </div>

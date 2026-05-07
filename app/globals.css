@@ -12,6 +12,7 @@
   --border: #333060;
   --pixel: 'Press Start 2P', monospace;
   --mono: 'VT323', monospace;
+  --body: 'IBM Plex Mono', monospace;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -102,6 +103,13 @@ a:hover { color: var(--white); }
 .verdict { background: var(--bg-card); border: 3px solid var(--yellow); padding: 20px 24px; box-shadow: 4px 4px 0 var(--yellow-dark); margin: 24px 0; }
 .verdict-label { font-family: var(--pixel); font-size: 8px; color: var(--yellow); margin-bottom: 8px; letter-spacing: 2px; }
 .verdict p { color: var(--muted); font-size: 18px; line-height: 1.6; }
+
+.body-copy {
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: #e8e6f0;
+}
 
 .stars { color: var(--yellow); font-size: 20px; }
 

@@ -77,7 +77,7 @@ export default function BestRetroHandheldGuide() {
         breadcrumbs={breadcrumbs}
       />
 
-      <article className="section" style={{ maxWidth: '900px', margin: '0 auto' }}>
+      <article className="section" style={{ maxWidth: '680px', margin: '0 auto' }}>
         <nav aria-label="Breadcrumb" style={{ fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0', marginBottom: '20px' }}>
           <Link href="/">Home</Link> <span aria-hidden="true">▸</span>{' '}
           <Link href="/guides">Guides</Link> <span aria-hidden="true">▸</span>{' '}
@@ -93,7 +93,7 @@ export default function BestRetroHandheldGuide() {
           #ad — Contains affiliate links. Playhouse.io may earn a commission.
         </p>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', marginBottom: '24px' }}>
+        <p className="body-copy" style={{ marginBottom: '24px' }}>
           We tested the three most popular budget retro handhelds side by side. Here&apos;s how they compare.
         </p>
 
@@ -106,7 +106,7 @@ export default function BestRetroHandheldGuide() {
                 {item.name.toUpperCase()}
               </h2>
             </div>
-            <p style={{ fontFamily: "'VT323', monospace", fontSize: '17px', color: '#aaa8d0', marginBottom: '12px' }}>
+            <p className="body-copy" style={{ marginBottom: '12px' }}>
               [Short verdict paragraph for each pick — 2-3 sentences explaining why it earned this position.]
             </p>
             <Link href={item.url.replace('https://playhouse.io', '')} className="btn btn-yellow">
@@ -124,7 +124,7 @@ export default function BestRetroHandheldGuide() {
             <h3 style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '9px', color: '#fff', marginBottom: '8px', lineHeight: 1.8 }}>
               {f.question}
             </h3>
-            <p style={{ fontFamily: "'VT323', monospace", fontSize: '17px', color: '#aaa8d0' }}>
+            <p className="body-copy">
               {f.answer}
             </p>
           </div>

@@ -10,7 +10,7 @@ export default function BestForKids() {
   return (
     <>
       <style>{`
-        .guide-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+        .guide-wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
         .pc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .age-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
         @media (max-width: 768px) {
@@ -112,7 +112,7 @@ export default function BestForKids() {
             <span className="stars">★★★★☆</span>
             <span className="badge">AGES 6+</span>
           </div>
-          <p style={{ fontFamily: "'VT323', monospace", fontSize: '19px', color: '#aaa8d0', lineHeight: '1.6', marginBottom: '16px' }}>
+          <p className="body-copy" style={{ marginBottom: '16px' }}>
             At £35 the R36S is the least painful option if the device gets lost, dropped or broken — which with younger kids is a real consideration. It comes pre-loaded with games including Mario, Sonic, Street Fighter and hundreds more that kids will instantly recognise. Setup is simple and the controls are intuitive even for young gamers.
           </p>
           <div className="pc-grid" style={{ marginBottom: '20px' }}>
@@ -150,10 +150,10 @@ export default function BestForKids() {
             <span className="stars">★★★★★</span>
             <span className="badge">AGES 10+</span>
           </div>
-          <p style={{ fontFamily: "'VT323', monospace", fontSize: '19px', color: '#aaa8d0', lineHeight: '1.6', marginBottom: '16px' }}>
+          <p className="body-copy" style={{ marginBottom: '16px' }}>
             For older kids who are genuinely into gaming, the Miyoo Mini Plus is worth the extra spend. The better screen and build quality means they&apos;ll actually use it long term rather than losing interest after a week. The huge Onion OS community means there&apos;s always something new to discover — themes, apps, new emulators.
           </p>
-          <p style={{ fontFamily: "'VT323', monospace", fontSize: '19px', color: '#aaa8d0', lineHeight: '1.6', marginBottom: '20px' }}>
+          <p className="body-copy" style={{ marginBottom: '20px' }}>
             It&apos;s also a great way to introduce kids to gaming history — playing the original Super Mario Bros, Zelda or Sonic on authentic hardware (or near-authentic) is a different experience to mobile games.
           </p>
           <div className="pc-grid" style={{ marginBottom: '20px' }}>
@@ -191,7 +191,7 @@ export default function BestForKids() {
             <span className="stars">★★★☆☆</span>
             <span className="badge">AGES 5+</span>
           </div>
-          <p style={{ fontFamily: "'VT323', monospace", fontSize: '19px', color: '#aaa8d0', lineHeight: '1.6', marginBottom: '20px' }}>
+          <p className="body-copy" style={{ marginBottom: '20px' }}>
             For very young children a mini arcade machine is often better than a handheld — it sits on a table, the controls are simple (joystick and buttons), and there&apos;s no risk of it going in a pocket and getting lost. The 240 built-in games are simple enough for young children to grasp immediately.
           </p>
           <div className="pc-grid" style={{ marginBottom: '20px' }}>

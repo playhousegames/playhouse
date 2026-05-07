@@ -25,7 +25,7 @@ export default function About() {
         ]}
       />
 
-      <article className="section" style={{ maxWidth: '780px', margin: '0 auto' }}>
+      <article className="section" style={{ maxWidth: '680px', margin: '0 auto' }}>
         <nav aria-label="Breadcrumb" style={{ fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0', marginBottom: '20px' }}>
           <Link href="/">Home</Link> <span aria-hidden="true">▸</span>{' '}
           <span style={{ color: '#ffd700' }}>About</span>
@@ -40,7 +40,7 @@ export default function About() {
           A retro gaming site written by someone who was there the first time around.
         </p>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.7', marginBottom: '20px' }}>
+        <p className="body-copy" style={{ marginBottom: '20px' }}>
           Playhouse.io is run by Matthew Myles, a designer and developer based in Jersey in the
           Channel Islands. It exists because the current retro handheld scene is genuinely
           exciting — better hardware, lower prices, and more choice than ever — but most of the
@@ -48,7 +48,7 @@ export default function About() {
           the device.
         </p>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.7', marginBottom: '32px' }}>
+        <p className="body-copy" style={{ marginBottom: '32px' }}>
           This site tries to be the opposite of that. Honest opinions. Proper context.
           Recommendations that would survive a conversation with a friend who knows the
           hobby.
@@ -58,11 +58,11 @@ export default function About() {
           HIGH SCORE TABLE
         </h2>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.7', marginBottom: '16px' }}>
+        <p className="body-copy" style={{ marginBottom: '16px' }}>
           The gaming history that makes this site what it is:
         </p>
 
-        <div style={{ fontFamily: "'VT323', monospace", fontSize: '17px', color: '#aaa8d0', lineHeight: '1.8', marginBottom: '24px' }}>
+        <div className="body-copy" style={{ marginBottom: '24px' }}>
           <p style={{ marginBottom: '16px' }}>
             <span style={{ color: '#ffd700' }}>Atari 2600.</span> The first console I ever owned.
             Pac-Man was the game I wore the joystick out playing. Combat — the one with the
@@ -96,21 +96,21 @@ export default function About() {
           WHY ANOTHER RETRO SITE?
         </h2>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.7', marginBottom: '16px' }}>
+        <p className="body-copy" style={{ marginBottom: '16px' }}>
           The retro handheld world has an asymmetry problem. The big YouTube channels do
           genuinely excellent work but the format rewards hype cycles and release-day reviews.
           Written reviews, meanwhile, are mostly affiliate templates that read like the
           person had never turned the device on.
         </p>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.7', marginBottom: '16px' }}>
+        <p className="body-copy" style={{ marginBottom: '16px' }}>
           What&apos;s missing is the equivalent of the knowledgeable friend at the pub — the
           one who&apos;ll tell you the R36S D-pad is actually better than the Miyoo&apos;s, but the
           Miyoo has the nicer screen, so which matters more depends on whether you play more
           Mario or more beat-em-ups.
         </p>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.7', marginBottom: '32px' }}>
+        <p className="body-copy" style={{ marginBottom: '32px' }}>
           That&apos;s what Playhouse is trying to be.
         </p>
 
@@ -118,25 +118,25 @@ export default function About() {
           THE RULES OF THE HOUSE
         </h2>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.7', marginBottom: '14px' }}>
+        <p className="body-copy" style={{ marginBottom: '14px' }}>
           <span style={{ color: '#ffd700' }}>Affiliate links are marked.</span> Playhouse earns a
           small commission when you buy through our Amazon UK links. It costs you nothing
           extra, and it&apos;s never influenced a recommendation.
         </p>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.7', marginBottom: '14px' }}>
+        <p className="body-copy" style={{ marginBottom: '14px' }}>
           <span style={{ color: '#ffd700' }}>If I haven&apos;t used it, I&apos;ll say so.</span> Not every
           device can be hands-on tested. Where a review draws on manufacturer specs and
           community consensus rather than my own use, I&apos;ll tell you — and what that means
           for the confidence of the recommendation.
         </p>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.7', marginBottom: '14px' }}>
+        <p className="body-copy" style={{ marginBottom: '14px' }}>
           <span style={{ color: '#ffd700' }}>No sponsored reviews.</span> Ever. If a manufacturer
           sends a device, it gets disclosed and it still gets the honest verdict.
         </p>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.7', marginBottom: '32px' }}>
+        <p className="body-copy" style={{ marginBottom: '32px' }}>
           <span style={{ color: '#ffd700' }}>Recommendations over rankings.</span> The &quot;best&quot;
           retro handheld depends entirely on what you want to play and how you want to play
           it. Playhouse tries to help you find the right one for you, not crown a winner.
@@ -146,7 +146,7 @@ export default function About() {
           GET IN TOUCH
         </h2>
 
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.7', marginBottom: '32px' }}>
+        <p className="body-copy" style={{ marginBottom: '32px' }}>
           Disagree with a review? Think I&apos;ve missed a device worth covering? Send an email
           to <a href="mailto:hello@playhouse.io" style={{ color: '#ffd700' }}>hello@playhouse.io</a>.
           The hobby is better when people argue about it.

@@ -10,7 +10,7 @@ export default function BestArcade() {
   return (
     <>
       <style>{`
-        .guide-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+        .guide-wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
         .pc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .product-hero { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 24px; }
         .product-img { width: 140px; height: 140px; object-fit: contain; background: #1a0a2e; flex-shrink: 0; padding: 8px; border: 2px solid #333060; }
@@ -100,7 +100,7 @@ export default function BestArcade() {
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Amazon UK: <span style={{ color: '#39ff14' }}>4.5★</span></div>
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Price: <span style={{ color: '#ffd700' }}>~£35</span></div>
               </div>
-              <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.6' }}>
+              <p className="body-copy">
                 This is the real deal — an officially licensed Super Street Fighter II mini cabinet with authentic Capcom artwork, a proper 6-button layout, and a 6.75-inch colour screen. It&apos;s far more playable than smaller novelty machines and the Street Fighter II licence makes it genuinely collectible. At 4.5★ on Amazon UK it&apos;s one of the most consistently well-reviewed mini arcade machines available.
               </p>
             </div>
@@ -148,7 +148,7 @@ export default function BestArcade() {
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Amazon UK: <span style={{ color: '#39ff14' }}>4.3★</span></div>
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Price: <span style={{ color: '#ffd700' }}>~£30</span></div>
               </div>
-              <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.6' }}>
+              <p className="body-copy">
                 The budget option with 240 built-in 8-bit games, an 8-way joystick and a 2.5-inch colour screen. It&apos;s more novelty than serious gaming machine, but at £30 with a 4.3★ Amazon rating it&apos;s a well-received desk ornament that&apos;s actually fun to pick up and play.
               </p>
             </div>

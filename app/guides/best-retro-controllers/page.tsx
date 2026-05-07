@@ -10,7 +10,7 @@ export default function BestControllers() {
   return (
     <>
       <style>{`
-        .guide-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+        .guide-wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
         .pc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .product-hero { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 24px; }
         .product-img { width: 140px; height: 140px; object-fit: contain; background: #1a0a2e; flex-shrink: 0; padding: 8px; border: 2px solid #333060; }
@@ -101,7 +101,7 @@ export default function BestControllers() {
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Amazon UK: <span style={{ color: '#39ff14' }}>4.5★</span></div>
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Price: <span style={{ color: '#ffd700' }}>~£40</span></div>
               </div>
-              <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.6' }}>
+              <p className="body-copy">
                 The 8BitDo SN30 Pro is the gold standard retro controller. SNES-style layout, Bluetooth connectivity for Switch, PC, Mac and Android, and an exceptional D-pad. Build quality is excellent — it feels premium without being heavy.
               </p>
             </div>
@@ -148,7 +148,7 @@ export default function BestControllers() {
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Amazon UK: <span style={{ color: '#39ff14' }}>4.6★</span></div>
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Price: <span style={{ color: '#ffd700' }}>~£45</span></div>
               </div>
-              <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.6' }}>
+              <p className="body-copy">
                 The highest rated controller in our guide at 4.6★ on Amazon UK. The Pro 2 adds back paddles, multiple profile switching and a more ergonomic grip over the SN30 Pro. At just £5 more it&apos;s excellent value for a more capable controller.
               </p>
             </div>
@@ -193,7 +193,7 @@ export default function BestControllers() {
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Amazon UK: <span style={{ color: '#39ff14' }}>4.4★</span></div>
                 <div style={{ background: '#0d0620', border: '1px solid #333060', padding: '6px 12px', fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0' }}>Price: <span style={{ color: '#ffd700' }}>~£30</span></div>
               </div>
-              <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.6' }}>
+              <p className="body-copy">
                 A faithful Mega Drive 6-button pad recreation. If your retro gaming is primarily Sega — Mega Drive, Streets of Rage, Mortal Kombat — the M30 is the most authentic experience available. The six-button face layout is perfect for fighting games.
               </p>
             </div>

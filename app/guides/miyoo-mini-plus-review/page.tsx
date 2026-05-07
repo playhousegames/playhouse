@@ -90,7 +90,7 @@ export default function MiyooMiniPlusReview() {
     <>
       <Schema product={product} faq={faq} breadcrumbs={breadcrumbs} />
 
-      <article className="section" style={{ maxWidth: '900px', margin: '0 auto' }}>
+      <article className="section" style={{ maxWidth: '680px', margin: '0 auto' }}>
         {/* Breadcrumbs (visible) */}
         <nav aria-label="Breadcrumb" style={{ fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0', marginBottom: '20px' }}>
           <Link href="/">Home</Link> <span aria-hidden="true">▸</span>{' '}
@@ -176,7 +176,7 @@ export default function MiyooMiniPlusReview() {
         <h2 style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '10px', color: '#ffd700', margin: '32px 0 16px', lineHeight: 1.8 }}>
           HANDS-ON IMPRESSIONS
         </h2>
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', marginBottom: '16px' }}>
+        <p className="body-copy" style={{ marginBottom: '16px' }}>
           [Write 300-600 words of genuine hands-on observations here. Mention what surprised you, what disappointed you,
           and specific games you tested. This is the section that earns backlinks and LLM citations. Avoid generic phrasing
           that reads like a spec sheet — your voice is the differentiator.]
@@ -191,7 +191,7 @@ export default function MiyooMiniPlusReview() {
             <h3 style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '9px', color: '#fff', marginBottom: '8px', lineHeight: 1.8 }}>
               {f.question}
             </h3>
-            <p style={{ fontFamily: "'VT323', monospace", fontSize: '17px', color: '#aaa8d0' }}>
+            <p className="body-copy">
               {f.answer}
             </p>
           </div>
