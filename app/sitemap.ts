@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/guides/best-retro-controllers', priority: 0.9, freq: 'monthly' },
     { url: '/guides/best-mini-arcade-machines', priority: 0.9, freq: 'monthly' },
     { url: '/guides/best-retro-handheld-for-kids', priority: 0.9, freq: 'monthly' },
+    { url: '/guides/nintendo-switch-vs-miyoo-mini-plus', priority: 0.9, freq: 'monthly' },
     { url: '/handhelds', priority: 0.8, freq: 'weekly' },
     { url: '/arcade', priority: 0.8, freq: 'weekly' },
     { url: '/controllers', priority: 0.8, freq: 'weekly' },

@@ -51,6 +51,16 @@ export type BreadcrumbItem = {
   url: string;
 };
 
+export type ArticleMeta = {
+  headline: string;
+  description: string;
+  author: string;
+  datePublished: string;
+  dateModified?: string;
+  image?: string;
+  url: string;
+};
+
 // ---------- Builders ----------
 
 const SITE_URL = 'https://playhouse.io';
@@ -148,6 +158,26 @@ function buildBreadcrumbs(items: BreadcrumbItem[]) {
   };
 }
 
+function buildArticle(a: ArticleMeta) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: a.headline,
+    description: a.description,
+    image: a.image,
+    author: { '@type': 'Person', name: a.author },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon.ico` },
+    },
+    datePublished: a.datePublished,
+    ...(a.dateModified && { dateModified: a.dateModified }),
+    mainEntityOfPage: { '@type': 'WebPage', '@id': a.url },
+    url: a.url,
+  };
+}
+
 function buildOrganization() {
   return {
     '@context': 'https://schema.org',
@@ -184,6 +214,7 @@ type SchemaProps = {
     description: string;
     items: ListItem[];
   };
+  article?: ArticleMeta;
   faq?: FaqItem[];
   breadcrumbs?: BreadcrumbItem[];
   organization?: boolean;
@@ -193,6 +224,7 @@ type SchemaProps = {
 export default function Schema({
   product,
   itemList,
+  article,
   faq,
   breadcrumbs,
   organization,
@@ -203,6 +235,7 @@ export default function Schema({
   if (organization) blocks.push(buildOrganization());
   if (website) blocks.push(buildWebSite());
   if (breadcrumbs) blocks.push(buildBreadcrumbs(breadcrumbs));
+  if (article) blocks.push(buildArticle(article));
   if (product) blocks.push(buildProductReview(product));
   if (itemList) blocks.push(buildItemList(itemList.name, itemList.description, itemList.items));
   if (faq) blocks.push(buildFaqPage(faq));
