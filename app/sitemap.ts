@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/handhelds', priority: 0.8, freq: 'weekly' },
     { url: '/arcade', priority: 0.8, freq: 'weekly' },
     { url: '/controllers', priority: 0.8, freq: 'weekly' },
+    { url: '/about', priority: 0.5, freq: 'yearly' },
   ] as const;
 
   return routes.map(({ url, priority, freq }) => ({

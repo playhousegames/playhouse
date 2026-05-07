@@ -26,14 +26,12 @@ const items: ListItem[] = [
   {
     position: 2,
     name: 'Anbernic RG35XX',
-    url: 'https://playhouse.io/guides/rg35xx-review',
-    image: 'https://playhouse.io/products/rg35xx.jpg',
+    url: 'https://playhouse.io/guides/best-retro-handheld-under-50',
   },
   {
     position: 3,
     name: 'R36S',
-    url: 'https://playhouse.io/guides/r36s-review',
-    image: 'https://playhouse.io/products/r36s.jpg',
+    url: 'https://playhouse.io/guides/best-retro-handheld-under-50',
   },
 ];
 

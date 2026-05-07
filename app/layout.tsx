@@ -5,8 +5,36 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://playhouse.io'),
   title: 'Playhouse.io — Retro Gaming Guides & Reviews',
   description: 'Honest buying guides and reviews for retro handhelds, mini arcade machines and classic controllers. Find the best retro gaming gear in 2026.',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    url: 'https://playhouse.io',
+    siteName: 'Playhouse.io',
+    title: 'Playhouse.io — Retro Gaming Guides & Reviews',
+    description: 'Honest buying guides and reviews for retro handhelds, mini arcade machines and classic controllers. Find the best retro gaming gear in 2026.',
+    images: [
+      {
+        url: '/products/miyoo-mini-plus.jpg',
+        width: 1500,
+        height: 1500,
+        alt: 'Miyoo Mini Plus retro handheld — Playhouse.io',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Playhouse.io — Retro Gaming Guides & Reviews',
+    description: 'Honest buying guides and reviews for retro handhelds, mini arcade machines and classic controllers.',
+    images: ['/products/miyoo-mini-plus.jpg'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

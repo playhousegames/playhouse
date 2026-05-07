@@ -154,7 +154,7 @@ function buildOrganization() {
     '@type': 'Organization',
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    logo: `${SITE_URL}/favicon.ico`,
     sameAs: [
       // add social profiles here as you launch them
     ],
