@@ -19,7 +19,7 @@ export default function Footer() {
             <p style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '12px', color: '#ffd700', marginBottom: '12px', letterSpacing: '2px', lineHeight: 1.8 }}>
               PLAY<span style={{ color: '#fff' }}>HOUSE</span>.IO
             </p>
-            <p style={{ fontFamily: "'VT323', monospace", fontSize: '16px', color: '#aaa8d0', lineHeight: '1.6', margin: 0 }}>
+            <p className="body-copy" style={{ margin: 0 }}>
               Honest retro gaming reviews from someone who was there the first time around.
             </p>
           </div>
@@ -63,14 +63,10 @@ export default function Footer() {
 
         {/* Affiliate disclosure strip */}
         <div style={{ background: '#1a0a2e', borderTop: '2px solid #333060', padding: '20px 32px' }}>
-          <p style={{
-            fontFamily: "'VT323', monospace",
-            fontSize: '15px',
-            color: '#aaa8d0',
+          <p className="body-copy" style={{
             maxWidth: '900px',
             margin: '0 auto',
             textAlign: 'center',
-            lineHeight: '1.6',
           }}>
             <span style={{ color: '#ffd700' }}>#ad</span> — As an Amazon Associate, Playhouse.io earns from qualifying purchases.
             Our picks are chosen independently — the affiliate link never changes what we recommend.

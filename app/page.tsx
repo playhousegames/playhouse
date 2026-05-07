@@ -71,7 +71,7 @@ export default function Home() {
         }}>
           YOUR GUIDE TO RETRO GAMING GEAR
         </h1>
-        <p style={{ fontFamily: "'VT323', monospace", fontSize: '20px', color: '#aaa8d0', margin: '0 auto', maxWidth: '640px', lineHeight: 1.5 }}>
+        <p className="body-copy" style={{ margin: '0 auto', maxWidth: '640px' }}>
           Honest reviews and buying guides for retro handhelds, arcade machines and controllers.
           Written by someone who was there the first time around.
         </p>
@@ -132,7 +132,7 @@ export default function Home() {
             <h2 style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '11px', color: '#fff', marginBottom: '16px', marginTop: '8px', lineHeight: 1.8 }}>
               BEST RETRO HANDHELDS: MIYOO MINI PLUS vs R36S vs RG35XX
             </h2>
-            <p style={{ fontFamily: "'VT323', monospace", fontSize: '18px', color: '#aaa8d0', lineHeight: '1.6', marginBottom: '20px' }}>
+            <p className="body-copy" style={{ marginBottom: '20px' }}>
               We put the three most popular budget retro handhelds side by side.
               Here&apos;s what actually matters when you&apos;re choosing between them.
             </p>
