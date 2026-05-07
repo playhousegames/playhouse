@@ -67,8 +67,7 @@ const breadcrumbs: BreadcrumbItem[] = [
 ];
 
 const MIYOO_URL = 'https://amzn.to/4mE11wG';
-// TODO: Replace with an amzn.to shortlink from your Amazon Associates dashboard
-const SWITCH_URL = 'https://www.amazon.co.uk/dp/B098RL6SBJ';
+const SWITCH_URL = 'https://amzn.to/4eyHs76';
 
 const useCases = [
   {
