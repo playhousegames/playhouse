@@ -64,6 +64,14 @@ var onelink_us_tag = "jerseyreviews-20";
             gtag('config', 'G-N4L985K6VE');
           `}
         </Script>
+        <Script
+          src="https://geniuslinkcdn.com/snippet.min.js"
+          strategy="afterInteractive"
+          onLoad={() => {
+            // @ts-ignore
+            window.Genius?.amazon?.convertLinks(426973, true, "https://buy.geni.us");
+          }}
+        />
         <Nav />
         <main>{children}</main>
         <Footer />
